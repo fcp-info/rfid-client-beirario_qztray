@@ -1,0 +1,63 @@
+{
+  "name": "rfid-client-beirario-ex-qz",
+  "productName": "RFID-client Beira-Rio",
+  "version": "1.0.0",
+  "description": "Aplicação para impressão de Etiquetas RFID",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "start-forge": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "FCP Informática",
+    "email": "suporte@fcp.com.br"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "electron-prompt": "^1.7.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "ini": "^4.1.1",
+    "websocket": "^1.0.34",
+    "write-ini-file": "^4.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "22.3.26",
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.fcp-portal-rfid-beirario.app",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icons/fcp.ico"
+    },
+    "nsis": {
+      "installerIcon": "assets/icons/fcp.ico",
+      "uninstallerIcon": "assets/icons/fcp.ico",
+      "uninstallDisplayName": "FCP Portal e-RFID",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "extraFiles": [
+      {
+        "filter": [
+          "config.ini"
+        ]
+      }
+    ]
+  }
+}
