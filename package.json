@@ -1,5 +1,5 @@
 {
-  "name": "rfid-client-beirario-ex-qz",
+  "name": "rfid-client-beirario-qz",
   "productName": "RFID-client Beira-Rio",
   "version": "1.0.0",
   "description": "Aplicação para impressão de Etiquetas RFID",
@@ -38,7 +38,7 @@
     "electron-builder": "^24.6.4"
   },
   "build": {
-    "appId": "com.fcp-portal-rfid-beirario.app",
+    "appId": "com.fcp-portal-rfid-beirario.qz",
     "win": {
       "target": [
         "nsis"
